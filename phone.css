@@ -9,7 +9,9 @@ a {
 }
 
 body {
-	background-color: black;
+	background-color: #333;
+	background-image: url("pic_page/desktop.png");
+	background-position: -5px -2px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 17px;
 }
@@ -54,6 +56,11 @@ select, input, .button {
 	width: 320px;
 	height: 568px;
 	overflow: hidden;
+}
+
+#phone {
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	border-right: 1px solid rgba(0,0,0,0.3);
 }
 
 #phone:hover {

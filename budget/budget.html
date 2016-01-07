@@ -1,0 +1,97 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../phone.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+
+	#pieChunks div{
+		display: inline-block;
+		/*height: 100px;*/
+		width: 157px;
+		background-color: white;
+		/*border: solid;*/
+		background-repeat: no-repeat;
+		padding-top: 93px;
+		padding-bottom: 10px;
+		text-align: center;
+
+		background-size: 98px auto;
+		font-size: 12px;
+	}
+
+	#pieChunks #all {
+		background-image: url("../icons/BudgetWheel_All.png");
+		background-size: 117px auto;
+		background-position: center -14px;
+	}
+
+	#pieChunks #food {
+		background-image: url("../icons/BudgetWheel_Food_Dining.png");
+		background-position: center -2px;	
+	}
+
+	#pieChunks #shop {
+		background-image: url("../icons/BudgetWheel_Shopping.png");
+		background-position: center -5px;	
+	}
+
+	#pieChunks #household {
+		background-image: url("../icons/BudgetWheel_Household.png");
+		background-position: center -7px;	
+	}
+
+	#pieChunks #auto {
+		background-image: url("../icons/BudgetWheel_Auto_Transport.png");
+		background-position: center -7px;	
+	}
+
+	#pieChunks #no_category {
+		background-image: url("../icons/BudgetWheel_Uncategorized.png");
+		background-position: center -5px;	
+	}
+</style>
+
+</head>
+
+<img id="test" src="test/home_test.png"/>
+
+<div id="phone">
+	<img src="iPhone_top_info.jpg" id="phone_top"/>
+	<div id="content">
+		<div id="topbar" class="whitebox">
+			Budget
+			<a href="../home.html"><div id="back_page"></div></a>
+		</div>
+
+		<hr>
+		
+		<div id="pieChunks" class="whitebox">
+			<hr>
+			<a href="all.html"><div id="all">ALL</div></a>
+			<a href="food.html"><div id="food">FOOD/DINING</div></a>
+			<a href="food.html"><div id="shop">SHOPPING</div></a>
+			<a href="food.html"><div id="household">HOUSEHOLD</div></a>
+			<a href="food.html"><div id="auto">AUTO/TRANSPORT</div></a>
+			<a href="food.html"><div id="no_category">UNCATEGORIZED</div></a>
+			<hr>
+		</div>
+
+		<hr>
+		<div class="whitebox padleft right_arrow_div">
+			<hr>
+			<div>Edit Categories</div>
+			<hr>
+		</div>
+
+	</div>
+	
+
+
+</div>
+
+
+
+
+
+</html>

@@ -1,0 +1,359 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../phone.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<style>
+	
+
+	#message .button {
+		width: 105px;
+		font-size: 12px;
+	}
+
+	#overlay, #calendar_overlay {
+		position: fixed;
+		top: 42px;
+		height: 526px;
+		width: 320px;
+		background-color: rgba(95, 95, 95, 0.75);
+		display: none;
+	}
+
+
+	#message {
+		margin: 20px;
+		background-color: white;
+		height: 416px;
+		border-radius: 6px;
+	}
+
+	.date {
+		background-image: url("../icons/calendar_nodate_icon.svg");
+		background-repeat: no-repeat;
+		background-size: 23px auto;
+		background-position: 260px 4px;
+	}
+
+	#recur_options {
+		display: none;
+	}
+
+	#sticky_buttons {
+		bottom: 350px;
+	}
+
+	.padleft div div {
+		padding-left: 0px;
+		
+	}
+
+	.padleft div input, .padleft div select {
+		margin-left: 0px;
+	}
+
+	#weekly, #biweekly, #monthly {
+		display: none;
+	}
+
+</style>
+
+</head>
+
+<!-- Bebe is beauitful -->
+
+
+<div id="phone">
+	<img src="iPhone_top_info.jpg" id="phone_top"/>
+
+	<div id="content">
+		<div id="topbar" class="whitebox">
+			<center>Send Money</center>
+			<a href="sendMoney.html"><div id="back_page"></div></a>
+		</div>
+
+		<hr>
+		<div class="whitebox padleft">
+			<hr>
+			<div class="small_title">TO</div>
+			
+			<div class="text_entry_header">Jon Smith</div>
+			<hr>
+		</div>
+
+		<hr>
+		<div class="whitebox padleft">
+			<hr>
+			<div class="small_title">FROM</div>
+			<select>
+				<option value="none"> </option>
+				<option value="text">Checking</option>
+				<option value="email">Brokerage</option>
+			</select>
+			<hr>
+			<hr>
+			<div class="small_title">AMOUNT</div>
+			<input type="text"></input>
+			<hr>
+			<hr>
+			
+			<div class="small_title">
+				MAKE RECURRING:
+				<input type="checkbox" id="swipebutton" />
+				<label for="swipebutton"></label>
+			</div>
+
+			<div id="norm_options">
+				<div class="small_title">DATE</div>
+				<input id="date_input" class="date" type="text"></input>
+			<hr>
+			</div>
+
+			<div id="recur_options">
+				<div class="small_title">Repeat</div>
+				<select id="repeat">
+					<option value="none"> </option>
+					<option value="week">Weekly</option>
+					<option value="biweek">Biweekly</option>
+					<option value="month">Monthly</option>
+				</select>
+
+				<hr>
+
+				<div id="weekly">
+					<div class="small_title">Choose day of week</div>
+					<select>
+						<option value="none"> </option>
+						<option value="week">Sunday</option>
+						<option value="week">Monday</option>
+						<option value="week">Tuesday</option>
+						<option value="week">Wednesday</option>
+						<option value="week">Thursday</option>
+						<option value="week">Friday</option>
+						<option value="week">Saturday</option>
+					</select>
+				</div>
+
+				<div id="biweekly">
+					<div class="small_title">Choose start date</div>
+					<input id="biweek_cal" class="date" type="text"></input>
+				</div>
+
+				<div id="monthly">
+					<div class="small_title">Choose day of month</div>
+					<select>
+						<option value="none">1st</option>
+						<option value="week">2nd</option>
+						<option value="biweek">3rd</option>
+						<option value="month">4th</option>
+						<option value="none">5th</option>
+						<option value="week">6th</option>
+						<option value="biweek">7th</option>
+						<option value="month">8th</option>
+						<option value="none">9th</option>
+						<option value="week">10th</option>
+						<option value="biweek">11th</option>
+						<option value="month">12th</option>
+						<option value="none">13th</option>
+						<option value="week">14th</option>
+						<option value="biweek">15th</option>
+						<option value="month">16th</option>
+						<option value="none">17th</option>
+						<option value="week">18th</option>
+						<option value="biweek">19th</option>
+						<option value="month">20th</option>
+						<option value="none">21st</option>
+						<option value="week">22nd</option>
+						<option value="biweek">23rd</option>
+						<option value="month">24th</option>
+						<option value="none">25th</option>
+						<option value="week">26th</option>
+						<option value="biweek">27th</option>
+						<option value="month">28th</option>
+						<option value="none">Third from last day of month</option>
+						<option value="week">Second from last day of month</option>
+						<option value="none">Last of day month</option>
+					</select>
+				</div>
+
+
+			</div>
+			<hr>
+			<div class="small_title">MEMO</div>
+			<input type="text"></input>
+			<hr>
+			<hr>
+			<div>
+				<a href="home.html"><div class="button">Cancel</div></a>
+				<div id="continue" class="button">Continue</div>
+			</div>
+			<hr>
+		</div>
+	</div>
+</div>
+
+<div id="overlay">
+	<div id="message" class="padleft">
+		<hr>
+		<div class="small_title">PAYMENT SUMMARY</div>
+		<hr>
+		<hr>
+		<div class="small_title">TO PAYEE:</div>
+		<div class="text_entry_header">Jon Smith</div>
+		<hr>
+		<div class="small_title">FROM:</div>
+		<div class="text_entry_header">Checking</div>
+		<hr>
+		<div class="small_title">AMOUNT:</div>
+		<div class="text_entry_header">$450.00</div>
+		<hr>
+		<div class="small_title">DATE:</div>
+		<div class="text_entry_header">11/16/15</div>
+		<hr>
+		<div class="small_title">MEMO:</div>
+		<div class="text_entry_header">Example memo</div>
+		<hr>
+		<hr>
+		<div>
+			<div id="cancel_overlay" class="button">Cancel</div>
+			<a href="payComplete.html"><div class="button">Send Payment</div></a>
+		</div>
+	</div>
+</div>
+
+
+
+<style>
+
+#calendar_overlay {
+	/*display: inherit;*/
+	background-image: url("../pic_page/calander.png");
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#calendar_cancel, #calendar_choose_date {
+	position: fixed;
+	/*background-color: red;*/
+}
+
+#calendar_choose_date {
+	top: 418px;
+	height: 50px;
+	width: 47px;
+	left: 43px;
+}
+
+#calendar_cancel {
+	top: 193px;
+	height: 50px;
+	width: 47px;
+	left: 264px;
+}
+
+
+</style>
+
+<div id="calendar_overlay">
+	<div id="calendar_cancel"></div>
+	<div id="calendar_choose_date"></div>
+</div>
+
+<script type="text/javascript">
+	window.onload = function() {
+	 	
+
+	    var cntn = document.getElementById('continue');
+	    cntn.onclick = function() {
+		    document.getElementById("overlay").style.display = "inherit";
+	    }
+
+	   	var close = document.getElementById('cancel_overlay');
+	    close.onclick = function() {
+		    document.getElementById("overlay").style.display = "none";
+	    }
+
+
+	    //Calander Stuff
+	    var cal_target;
+
+	    var biweek_cal = document.getElementById("biweek_cal");
+	    biweek_cal.onclick = function() {
+	    	cal_target = biweek_cal;
+		    document.getElementById("calendar_overlay").style.display = "inherit";
+	    }
+
+	    var cal_open = document.getElementById('date_input');
+	    cal_open.onclick = function() {
+	    	cal_target = cal_open;
+		    document.getElementById("calendar_overlay").style.display = "inherit";
+	    }
+
+	    // var cal_open = document.getElementById('date_input');
+	    // cal_open.onclick = function() {
+		   //  document.getElementById("calendar_overlay").style.display = "inherit";
+	    // }
+
+	    var cal_cncl = document.getElementById('calendar_cancel');
+	    cal_cncl.onclick = function() {
+		    document.getElementById("calendar_overlay").style.display = "none";
+	    }
+
+	    var cal_date = document.getElementById('calendar_choose_date');
+	    cal_date.onclick = function() {
+		    document.getElementById("calendar_overlay").style.display = "none";
+		    cal_target.value = "11/16/15";
+	    }
+
+	    var make_recur = document.getElementById('swipebutton');
+	    make_recur.onclick = function() {
+	    	var opt = document.getElementById('recur_options');
+	    	var norm = document.getElementById('norm_options');
+	    	if(opt.style.display == "inherit") {
+	    		opt.style.display = "none";
+	    		norm.style.display = "inherit";
+	    	}
+	    	else {
+	    		opt.style.display = "inherit";
+	    		norm.style.display = "none";
+	    	}
+	    	
+	    }
+
+
+
+	    var weekly = document.getElementById('weekly');
+	    var biweekly = document.getElementById('biweekly');
+	    var monthly = document.getElementById('monthly');
+
+	    var repeat = document.getElementById('repeat');
+	    repeat.onchange = function() {
+	    	var val = repeat.value;
+	    	if(val == "week") {
+	    		weekly.style.display = "inherit";
+	    		biweekly.style.display = "none";
+	    		monthly.style.display = "none";
+	    	}
+	    	if(val == "biweek") {
+	    		weekly.style.display = "none";
+	    		biweekly.style.display = "inherit";
+	    		monthly.style.display = "none";
+	    	}
+	    	if(val == "month") {
+	    		weekly.style.display = "none";
+	    		biweekly.style.display = "none";
+	    		monthly.style.display = "inherit";
+	    	}
+
+		    // document.getElementById("calendar_overlay").style.display = "none";
+		    // document.getElementById("date_input").value = "1/2/3";
+	    }
+
+	  
+	}
+</script>
+
+
+
+</html>

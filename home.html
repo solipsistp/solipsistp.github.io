@@ -1,0 +1,140 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="phone.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+	.account {
+		/*font-weight: bold;*/
+		padding: 10px;
+		/*padding-top: 33px;*/
+		/*padding-bottom: 18px;*/
+		/*font-size: 18px;*/
+	}
+
+	.account h1 {
+		font-size: 20px;
+	}
+
+	.account div {
+		text-align: right;
+		display: inline-block;
+		float: right;
+		margin-right: 23px;
+		/*right: 0px;*/
+	}
+
+
+	/*#budget_bar {
+
+	}*/
+
+	#budget, #monthly {
+		/*background-color: red;*/
+		width: 135px;
+		height: 150px;
+		display: inline-block;
+		background-repeat: no-repeat;
+	}
+
+	#budget {
+		background-image: url("icons/BudgetWheel_withKey.png");
+		background-size: 150px auto;
+		background-position: 3px center;
+	}
+
+	#monthly {
+		background-image: url("icons/Budget_Graph.png");
+		background-size: 158px;
+		background-position: center;
+	}
+</style>
+
+</head>
+
+<img id="test" src="test/home_test.png"/>
+
+<div id="phone">
+	<img src="iPhone_top_info.jpg" id="phone_top"/>
+	<div id="content">
+		<div id="topbar" class="whitebox">
+			
+			Home
+			<img id="hamburger" src="icons/menu_bars.svg"/>
+		</div>
+
+		<hr>
+		<a href="budget/budget.html"><div id="budget_bar" class="whitebox padleft right_arrow_div">
+			<div id="budget"></div>
+			<div id="monthly"></div>
+		</div></a>
+
+		<hr>
+		<a href="banking/checking.html"><div class="whitebox account right_arrow_div">
+			<hr>
+			<hr>
+			<h1>CHECKING</h1>
+			Balance<div>$1,000.32</div>
+			<hr>
+			<hr>
+		</div></a>
+
+		<hr>
+		<div class="whitebox account right_arrow_div">
+			<hr>
+			<hr>
+			<h1>BROKERAGE</h1>
+			Balance<div>$1,000.32</div>
+			<hr>
+			<hr>
+		</div>
+
+
+		<div id="bottom_bar">
+			<a href="banking/transfer.html"><div id="transfer">Transfer</div></a>
+			<a href="banking/sendMoney.html"><div id="send">Send Money</div></a>
+			<a href="banking/deposit.html"><div id="deposit">Deposit</div></a>
+		</div>
+	</div>
+	
+
+	<ul id="sidebar">
+		
+		<!-- <a href="home.html"><li><img src="icons/home_dark_icon.svg"/><div>Home</div></li></a> -->
+		<li id="charles"></li>
+		<li><a href="settings/contact.html"><img src="icons/Contact_icon.svg"/><div>Contact</div></a></li>
+		<li><a href="settings/settings.html"><img src="icons/settings_icon.svg"/><div>Settings and Alerts</div></a></li>
+		<li><a href="home.html"><img src="icons/log_off_icon.svg"/><div>Log Off</div></a></li>
+		
+	</ul>
+
+</div>
+
+
+<script type="text/javascript">
+	window.onload = function() {
+	 	
+
+	    var brgr = document.getElementById('hamburger');
+	    brgr.onclick = function() {
+	    	if(document.getElementById("content").style.position != "relative") {
+		    	document.getElementById("content").style.left = "210px" ;
+		    	// document.getElementById("content").style.top = "-10px" ;
+		    	document.getElementById("content").style.position = "relative" ;
+		    	document.getElementById("sidebar").style.display = "inherit" ;
+		    }
+		    else {
+		    	document.getElementById("content").style.left = "" ;
+		    	document.getElementById("content").style.top = "" ;
+		    	document.getElementById("content").style.position = "" ;
+		    	document.getElementById("sidebar").style.display = "none" ;
+		    }
+	    }
+	  
+	}
+</script>
+
+
+
+
+</html>

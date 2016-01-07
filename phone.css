@@ -1,0 +1,366 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body {
+	background-color: black;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17px;
+}
+
+select, input, .button {
+	border: 1px solid rgba(156, 156, 156, 0.41);
+}
+
+.button {
+	padding: 4px;
+	padding-right: 10px;
+	height: 38px;
+	line-height: 36px;
+	display: inline-block;
+	background-color: #E5E5E5;
+	border-radius: 6px;
+	text-align: center;
+}
+
+.button_right {
+	position: relative;
+	left: 161px;
+}
+
+#content .button {
+	width: 124px;
+}
+
+#test {
+	width: 320px;
+	height: 568px;
+	position: fixed;
+	top: 0px;
+	z-index: 100;
+	opacity: 0.5;
+	display: none;
+	pointer-events: none;
+}
+
+#phone {
+	background-color: #F8F8F8;
+	width: 320px;
+	height: 568px;
+	overflow: hidden;
+}
+
+#phone:hover {
+    overflow-y: auto;
+    padding-right: 1px;
+}
+
+#topbar {
+	height: 42px;
+	line-height: 42px;
+	position: relative;
+	text-align: center;
+}
+
+#hamburger {
+	width: 64px;
+	position: absolute;
+	top: -12px;
+	left: -6px;
+}
+
+#back_page {
+	position: absolute;
+	top: 8px;
+	left: 6px;
+	height: 34px;
+    width: 34px;
+    background-image: url("icons/arrow_prev_page.svg");
+    background-repeat: no-repeat;
+}
+
+
+.padleft div {
+	padding-left: 11px;
+}
+
+
+.spacer {
+	height: 12px;
+}
+
+hr {
+	height: 12px;
+	/*height: 20px;*/
+	display: block;
+	border: none;
+}
+
+.small_title {
+	font-size: 12px;
+	/*padding-top: 15px;*/
+	/*padding-bottom: 10px;*/
+}
+
+
+input, select{
+	line-height: 36px;
+	padding: 4px;
+	background-color: #F2F2F2;
+	margin-left: 11px;
+	/*border: 1px solid #F0F0F0;*/
+	font-size: 17px;
+	border-radius: 6px;
+	height: 38px;
+	width: 296px;
+}
+
+select {
+    /*-moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    background-image: url("icons/arrow_page_down.svg");
+	background-repeat: no-repeat;
+	background-size: 27px;
+	background-position: 256px 6px;*/
+	/*background-color: red;*/
+}
+
+
+.text_entry_header {
+	/*font-size: 19px;*/
+}
+
+.right_arrow_div {
+	background-image: url("icons/arrow_next_page.png");
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 32px auto;
+}
+
+
+
+
+.whitebox {
+	background-color: white;
+}
+
+.border_underline {
+	border-bottom: 1px solid rgba(150, 150, 150, 0.09);
+}
+
+
+#phone_top {
+	top: 0px;
+	width: 320px;
+	/*position: fixed;*/
+	z-index: 50;
+	display: none;
+}
+
+
+/** SIDE BAR **/
+
+#sidebar {
+	display: none;
+	position: fixed;
+	top: 0px;
+	background-color: #bfbfbf;
+	width:210px;
+	height: 568px;
+	/*box-shadow: 1px 1px 5px #222;*/
+}
+
+#sidebar li {
+	background-color: #d9d9d9;
+	height: 45px;
+	line-height: 45px;
+	border-bottom: solid 1px #595959;
+}
+
+#sidebar li img {
+	float: left;
+	opacity: 0.7;
+	height: 45px;
+	width: 45px;
+}
+
+#sidebar li div {
+	float: left;
+	line-height: 45px;
+	/*display: inline-block;*/
+	margin-left: 15px;
+}
+
+#charles {
+	height: 430px !important;
+	background-image: url("icons/charles_shwab.jpeg");
+	background-size: 188px auto;
+	background-position: center 233px;
+	background-repeat: no-repeat;
+	filter: grayscale(1); 
+  	-webkit-filter: grayscale(1);
+}
+
+
+
+/** Bottom BAR **/
+#bottom_bar {
+	position: absolute;
+	top: 486px;
+	width: 320px;
+	background-color: #BFBFBF;
+	font-size: 11px;
+	text-align: center;
+	height: 82px;
+}
+
+#bottom_bar div {
+	/*height: 50px;*/
+	width: 103px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	height: 20px;
+	padding-top: 55px;
+}
+
+#bottom_bar.budget div {
+	/*height: 50px;*/
+	width: 77px;
+}
+
+/*#bottom_bar #home {
+	background-position: center 11px;
+	background-size: 48px auto;
+	background-image: url("icons/home_dark_icon.svg");
+}*/
+
+#bottom_bar #transfer {
+	background-position: center 11px;
+	background-size: 48px auto;
+	background-image: url("icons/transfer_money.svg");
+}
+
+#bottom_bar #send {
+	background-position: center 11px;
+	background-size: 48px auto;
+	background-image: url("icons/Send_Money_icon.svg");
+}
+
+#bottom_bar #deposit {
+	background-position: center 11px;
+	background-size: 48px auto;
+	background-image: url("icons/Deposit_Check_icon2.svg");
+}
+
+
+#bottom_bar #budgeting {
+	background-position: center 5px;
+	background-size: 68px auto;
+	background-image: url("icons/Budgeting_icon.png");
+}
+
+#bottom_bar #transactions {
+	background-position: center 11px;
+	background-size: 39px auto;
+	background-image: url("icons/Transactions_clipboard.svg");
+}
+
+#bottom_bar #trends {
+	background-position: center 10px;
+	background-size: 56px auto;
+	background-image: url("icons/Trends_icon.png");
+}
+
+#bottom_bar #what_if {
+	background-position: center 10px;
+	background-size: 42px auto;
+	background-image: url("icons/Whatif_icon.png");
+}
+
+
+#swipebutton {
+    display: none;
+}
+
+#swipebutton + label { 
+	display: block;
+	float: right;
+	height: 29px;
+	width: 66px;
+    background-image: url("icons/disable.png");
+    background-size: 55px auto;
+	background-position: 4px -9px;
+	background-repeat: no-repeat;
+
+}
+
+#swipebutton:checked + label {
+    background-image: url("icons/enable.png");
+   	background-size: 63px auto;
+	background-position: -2px -8px;
+}
+
+
+
+
+
+
+
+
+/***********************************************
+*				COLOR SECTION				   *
+************************************************/
+/*#phone {
+	background-color: #6ED7FF;
+}
+
+#charles {
+	filter: none;
+  	-webkit-filter: none;
+}
+
+#sidebar {
+    box-shadow: 0px 0px 5px black;
+}
+
+#sidebar li {
+    background-color: #009DD8;
+}
+
+.whitebox {
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+#bottom_bar {
+    background-color: #009DD8;
+}
+
+#bottom_bar div{
+	-webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+*/
+
+
+.whitebox {
+	background-color: #FFF;
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.1);
+	border-top: solid 1px rgba(125, 125, 125, 0.24);
+	border-bottom: solid 1px rgba(125, 125, 125, 0.24);
+}
+
+
+
+
+
+
+
+
